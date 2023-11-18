@@ -1,7 +1,7 @@
 # Pazarama Android Bootcamp Project
 
 
-This repository is the final project of the Pazarama Android Bootcamp, a collaborative effort by a team of dedicated developers.
+This repository is the project of the Pazarama Android Bootcamp, a collaborative effort by a team of dedicated developers.
 
 ## Table of Contents
 
@@ -15,11 +15,9 @@ This repository is the final project of the Pazarama Android Bootcamp, a collabo
 
 ## Introduction
 
-Briefly introduce your project here. Explain its purpose, goals, and any unique features. Use this section to give visitors a high-level overview of what your project is about.
 
 ## Contributors
 
-The following talented developers have contributed to this project:
 
 - [Muhammet Küdür](https://github.com/mskdr)
 - [Halil İbrahim Güçlü](https://github.com/higuclu)
@@ -28,7 +26,6 @@ The following talented developers have contributed to this project:
 
 ## Technologies and Libraries
 
-List the key technologies and libraries used in your project. Provide brief explanations for each if necessary.
 
 - [Kotlin](https://kotlinlang.org/)
 - [Coroutines](https://kotlinlang.org/docs/coroutines-overview.html)
@@ -46,9 +43,7 @@ List the key technologies and libraries used in your project. Provide brief expl
 - [Dagger Hilt](https://dagger.dev/hilt/)
 - [Glide](https://bumptech.github.io/glide/)
 
-## Screenshots
 
-Include screenshots of your application to showcase its user interface and key features.
 
 ### Detail Fragment
 
