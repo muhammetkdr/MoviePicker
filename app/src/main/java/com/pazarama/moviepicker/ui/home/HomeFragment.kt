@@ -1,4 +1,4 @@
-package com.pazarama.moviepicker.ui
+package com.pazarama.moviepicker.ui.home
 
 import androidx.fragment.app.Fragment
 import com.pazarama.moviepicker.R
