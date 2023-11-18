@@ -1,7 +1,8 @@
-package com.pazarama.moviepicker
+package com.pazarama.moviepicker.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.pazarama.moviepicker.R
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
