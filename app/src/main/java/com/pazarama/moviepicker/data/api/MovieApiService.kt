@@ -15,7 +15,7 @@ interface MovieApiService {
         @Query("apikey") apiKey: String = BuildConfig.API_KEY
     ): Response<Movies>
 
-    @GET("")
+    @GET("/")
     suspend fun getMovieById(
         @Query("i") imdbId: String,
         @Query("apikey") apiKey: String = BuildConfig.API_KEY
