@@ -4,7 +4,7 @@ This application is the final project of the Pazarama iOS Bootcamp, developed co
 
 - [Muhammet Küdür](https://github.com/mskdr)
 - [Halil İbrahim Güçlü](https://github.com/higuclu)
-- [Melih Can Sarıkaya](https://github.com/melihcan1376)
+- [Melih Can Sarıkaya](https://github.com/MelihcanSrky))
 - [Ertan AYYILDIZ](https://github.com/ErtanAyyildiz)
 
 
