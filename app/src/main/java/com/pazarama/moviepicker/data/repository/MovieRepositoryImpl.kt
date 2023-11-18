@@ -11,8 +11,8 @@ class MovieRepositoryImpl @Inject constructor(
     private val movieRemoteDataSource: MovieRemoteDataSource
 ) : MovieRepository {
 
-    override suspend fun getMovieData(): Flow<NetworkResponse<Movies>> {
-        return movieRemoteDataSource.getMovieData()
+    override suspend fun getMovieData(query:String): Flow<NetworkResponse<Movies>> {
+        return movieRemoteDataSource.getMovieData(query= query)
     }
 
     override suspend fun getMovieById(id: String): Flow<NetworkResponse<SearchResponse>> {

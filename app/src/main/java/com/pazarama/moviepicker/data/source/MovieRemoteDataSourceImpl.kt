@@ -11,9 +11,9 @@ import javax.inject.Inject
 
 class MovieRemoteDataSourceImpl @Inject constructor(private val apiService:MovieApiService): MovieRemoteDataSource {
 
-    override suspend fun getMovieData(): Flow<NetworkResponse<Movies>> = flow {
+    override suspend fun getMovieData(query:String): Flow<NetworkResponse<Movies>> = flow {
         emit(NetworkResponse.Loading)
-        val response = apiService.getMovieList()
+        val response = apiService.getMovieList(query= query)
         if (response.isSuccessful){
             response.body()?.let {
             emit(NetworkResponse.Success(it))

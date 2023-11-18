@@ -4,9 +4,12 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
+import androidx.appcompat.widget.SearchView
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
+import androidx.recyclerview.widget.GridLayoutManager
 import com.pazarama.moviepicker.common.NetworkResponse
 import com.pazarama.moviepicker.databinding.FragmentHomeBinding
 import com.pazarama.moviepicker.ui.home.adapter.MoviesAdapter
@@ -35,7 +38,7 @@ class HomeFragment @Inject constructor() : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        viewModel.getMovieData()
+        viewModel.getMovieData("batman")
         initUi()
         observeUi()
 
@@ -43,6 +46,21 @@ class HomeFragment @Inject constructor() : Fragment() {
 
     private fun initUi() {
         binding.rvMovie.adapter = adapter
+        binding.rvMovie.layoutManager =
+            GridLayoutManager(requireContext(), 2)
+
+        binding.searchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
+            override fun onQueryTextSubmit(query: String?): Boolean {
+                query?.let {
+                    viewModel.getMovieData(it)
+                }
+                return true
+            }
+
+            override fun onQueryTextChange(newText: String?): Boolean {
+                return true
+            }
+        })
     }
 
     private fun observeUi() {
@@ -52,9 +70,10 @@ class HomeFragment @Inject constructor() : Fragment() {
                 is NetworkResponse.Success -> {
                     response.data.search?.let { data ->
                         adapter.updateCharacters(data)
-                        adapter.setOnItemClickListener {id ->
-                        val action = HomeFragmentDirections.actionHomeFragmentToDetailFragment(id)
-                        findNavController().navigate(action)
+                        adapter.setOnItemClickListener { id ->
+                            val action =
+                                HomeFragmentDirections.actionHomeFragmentToDetailFragment(id)
+                            findNavController().navigate(action)
                         }
                     }
                 }
@@ -64,9 +83,8 @@ class HomeFragment @Inject constructor() : Fragment() {
                 }
 
                 is NetworkResponse.Error -> {
-
+                    Toast.makeText(requireContext(), "Server error!", Toast.LENGTH_LONG).show()
                 }
-
             }
         }
     }

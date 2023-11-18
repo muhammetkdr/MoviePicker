@@ -1,0 +1,4 @@
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <corners android:radius="12dp"/>
+    <stroke android:color="@color/cardview_dark_background" android:width="3dp"/>
+</shape>

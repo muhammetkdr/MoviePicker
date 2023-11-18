@@ -18,10 +18,9 @@ class HomeViewModel @Inject constructor(private val movieDataUseCase: GetMovieDa
     private val _movieData = MutableLiveData<NetworkResponse<Movies>>()
     val movieData : LiveData<NetworkResponse<Movies>> = _movieData
 
-    fun getMovieData() = viewModelScope.launch(Dispatchers.IO) {
-        movieDataUseCase.invoke().collect{
+    fun getMovieData(query:String="") = viewModelScope.launch(Dispatchers.IO) {
+        movieDataUseCase.invoke(query = query).collect{
             _movieData.postValue(it)
         }
     }
-
 }

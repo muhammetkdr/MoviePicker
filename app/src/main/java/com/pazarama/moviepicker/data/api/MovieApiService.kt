@@ -9,8 +9,9 @@ import retrofit2.http.Query
 
 interface MovieApiService {
 
-    @GET("?s=fast")
+    @GET("/")
     suspend fun getMovieList(
+        @Query("s") query :String = "fast",
         @Query("page") page: Int = 1,
         @Query("apikey") apiKey: String = BuildConfig.API_KEY
     ): Response<Movies>
