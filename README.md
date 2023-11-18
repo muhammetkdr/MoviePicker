@@ -23,8 +23,6 @@ This repository is the project of the Pazarama Android Bootcamp, a collaborative
 - [Material Design](https://material.io/develop/android/docs/getting-started)
 - [ConstraintLayout](https://developer.android.com/training/constraint-layout)
 - [ViewBinding](https://developer.android.com/topic/libraries/view-binding)
-- [JUnit](https://junit.org/junit5/)
-- [Espresso](https://developer.android.com/training/testing/espresso)
 - [Retrofit](https://square.github.io/retrofit/)
 - [Gson Converter](https://github.com/square/retrofit/tree/master/retrofit-converters/gson)
 - [Kotlin Coroutines](https://github.com/Kotlin/kotlinx.coroutines)
