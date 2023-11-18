@@ -4,7 +4,7 @@ This application is the final project of the Pazarama Android Bootcamp, develope
 
 - [Muhammet Küdür](https://github.com/mskdr)
 - [Halil İbrahim Güçlü](https://github.com/higuclu)
-- [Melih Can Sarıkaya](https://github.com/MelihcanSrky))
+- [Melih Can Sarıkaya](https://github.com/MelihcanSrky)
 - [Ertan AYYILDIZ](https://github.com/ErtanAyyildiz)
 
 
@@ -17,7 +17,8 @@ This application is the final project of the Pazarama Android Bootcamp, develope
 
 ## Screenshots
 
-[Include Screenshots or GIFs here]
+(https://github.com/mskdr/MoviePicker/assets/30385590/55f9ca5d-3141-4217-892a-8df066cd8230)
+
 
 ## Getting Started
 
