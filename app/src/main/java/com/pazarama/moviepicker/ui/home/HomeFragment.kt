@@ -12,8 +12,8 @@ import javax.inject.Inject
 @AndroidEntryPoint
 class HomeFragment @Inject constructor() : Fragment() {
 
-    private lateinit var _binding: FragmentHomeBinding
-    val binding get() = _binding
+    private var _binding: FragmentHomeBinding? = null
+    private val binding get() = _binding!!
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -21,7 +21,12 @@ class HomeFragment @Inject constructor() : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         _binding = FragmentHomeBinding.inflate(inflater, container, false);
-        return binding.getRoot();
+        return binding.root
+    }
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
     }
 
 }
