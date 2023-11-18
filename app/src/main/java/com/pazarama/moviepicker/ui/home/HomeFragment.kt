@@ -9,7 +9,7 @@ import javax.inject.Inject
 @AndroidEntryPoint
 class HomeFragment @Inject constructor() : BaseFragment<FragmentHomeBinding, HomeViewModel>(FragmentHomeBinding::inflate) {
 
-    override val viewModel: HomeViewModel by viewModels()
+    override val viewModel: HomeViewModel by viewModels<HomeViewModel>()
 
 
 
