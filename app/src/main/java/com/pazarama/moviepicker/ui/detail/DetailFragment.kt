@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.navArgs
@@ -45,19 +46,52 @@ class DetailFragment @Inject constructor() : Fragment(R.layout.fragment_detail) 
         viewModel.movieDetails.observe(viewLifecycleOwner) { response ->
             when (response) {
                 NetworkResponse.Loading -> {
-
+                    loadingView()
                 }
 
                 is NetworkResponse.Error -> {
-
+                    errorView()
+                    val toast = Toast.makeText(requireContext(), "Server error!", Toast.LENGTH_LONG)
+                    toast.show()
                 }
 
                 is NetworkResponse.Success -> {
                     binding.imageView.setMovieImage(response.data.poster)
                     binding.titleTextView.text = response.data.title
+                    binding.yearTextView.text = response.data.year
+                    binding.actorsTextView.text = response.data.actors
+                    binding.countryTextView.text = response.data.country
+                    binding.directorTextView.text = response.data.director
+                    binding.imdbRatingTextView.text = response.data.imdbRating
+                    successView()
                 }
             }
         }
+    }
+
+    private fun successView() {
+        binding.progressBar.visibility = View.GONE
+        showHideTextViews(View.VISIBLE)
+    }
+
+    private fun loadingView() {
+        binding.progressBar.visibility = View.VISIBLE
+        showHideTextViews(View.GONE)
+    }
+
+    private fun errorView() {
+        binding.progressBar.visibility = View.GONE
+        showHideTextViews(View.GONE)
+    }
+
+    private fun showHideTextViews(visibility: Int) {
+        binding.imageView.visibility = visibility
+        binding.titleTextView.visibility = visibility
+        binding.yearTextView.visibility = visibility
+        binding.actorsTextView.visibility = visibility
+        binding.countryTextView.visibility = visibility
+        binding.directorTextView.visibility = visibility
+        binding.imdbRatingTextView.visibility = visibility
     }
 
     override fun onDestroyView() {
