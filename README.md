@@ -13,7 +13,6 @@ This repository is the project of the Pazarama Android Bootcamp, a collaborative
 - [Contribution Guidelines](#contribution-guidelines)
 - [License](#license)
 
-## Introduction
 
 
 ## Contributors
@@ -52,7 +51,6 @@ This repository is the project of the Pazarama Android Bootcamp, a collaborative
 
 ## Getting Started
 
-Provide step-by-step instructions on how to set up the development environment and run the project locally. Be clear and concise in your instructions to help newcomers easily get started.
 
 1. **Clone the repository:**
 
