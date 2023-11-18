@@ -15,16 +15,5 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        setNavHostFragment()
-
-    }
-
-    private fun setNavHostFragment() {
-        val navHostFragment = supportFragmentManager.findFragmentById(R.id.navHostFragment) as NavHostFragment
-        val inflater = navHostFragment.navController.navInflater
-        val graph = inflater.inflate(R.navigation.nav_graph)
-        graph.setStartDestination(R.id.homeFragment)
-        val navController = navHostFragment.navController
-        navController.setGraph(graph, intent.extras)
     }
 }
