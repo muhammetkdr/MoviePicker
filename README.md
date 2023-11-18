@@ -1,6 +1,6 @@
 # Pazarama Android Bootcamp Project
 
-This application is the final project of the Pazarama iOS Bootcamp, developed collaboratively by the following contributors:
+This application is the final project of the Pazarama Android Bootcamp, developed collaboratively by the following contributors:
 
 - [Muhammet Küdür](https://github.com/mskdr)
 - [Halil İbrahim Güçlü](https://github.com/higuclu)
