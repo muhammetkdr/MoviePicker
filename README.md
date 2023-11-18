@@ -1,8 +1,7 @@
 # Pazarama Android Bootcamp Project
 
 
-This repository is the project of the Pazarama Android Bootcamp, a collaborative effort by a team of dedicated developers.
-
+This repository is a project built in the teamwork of Pazarama.
 
 
 ## Contributors
