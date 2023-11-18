@@ -17,7 +17,6 @@ This application is the final project of the Pazarama Android Bootcamp, develope
 
 ## Screenshots
 
-(https://github.com/mskdr/MoviePicker/assets/30385590/55f9ca5d-3141-4217-892a-8df066cd8230)
 
 
 ## Getting Started
