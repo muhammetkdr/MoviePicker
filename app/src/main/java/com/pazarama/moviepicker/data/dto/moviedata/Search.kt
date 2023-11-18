@@ -1,4 +1,4 @@
-package com.pazarama.moviepicker.data.dto
+package com.pazarama.moviepicker.data.dto.moviedata
 
 
 import com.google.gson.annotations.SerializedName

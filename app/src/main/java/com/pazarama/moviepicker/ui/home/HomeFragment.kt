@@ -6,8 +6,10 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
+import androidx.navigation.fragment.findNavController
 import com.pazarama.moviepicker.common.NetworkResponse
 import com.pazarama.moviepicker.databinding.FragmentHomeBinding
+import com.pazarama.moviepicker.ui.home.adapter.MoviesAdapter
 import dagger.hilt.android.AndroidEntryPoint
 import javax.inject.Inject
 
@@ -16,6 +18,8 @@ class HomeFragment @Inject constructor() : Fragment() {
 
     private var _binding: FragmentHomeBinding? = null
     private val binding get() = _binding!!
+
+    private val adapter by lazy { MoviesAdapter() }
 
     private val viewModel by viewModels<HomeViewModel>()
 
@@ -32,9 +36,13 @@ class HomeFragment @Inject constructor() : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         viewModel.getMovieData()
-
+        initUi()
         observeUi()
 
+    }
+
+    private fun initUi() {
+        binding.rvMovie.adapter = adapter
     }
 
     private fun observeUi() {
@@ -42,7 +50,13 @@ class HomeFragment @Inject constructor() : Fragment() {
             when (response) {
 
                 is NetworkResponse.Success -> {
-                    binding.tvTitle.text = response.data.search?.get(0)?.title
+                    response.data.search?.let { data ->
+                        adapter.updateCharacters(data)
+                        adapter.setOnItemClickListener {id ->
+                        val action = HomeFragmentDirections.actionHomeFragmentToDetailFragment(id)
+                        findNavController().navigate(action)
+                        }
+                    }
                 }
 
                 NetworkResponse.Loading -> {
@@ -56,7 +70,6 @@ class HomeFragment @Inject constructor() : Fragment() {
             }
         }
     }
-
 
     override fun onDestroyView() {
         super.onDestroyView()

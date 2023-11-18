@@ -1,7 +1,8 @@
 package com.pazarama.moviepicker.data.repository
 
 import com.pazarama.moviepicker.common.NetworkResponse
-import com.pazarama.moviepicker.data.dto.Movies
+import com.pazarama.moviepicker.data.dto.moviedata.Movies
+import com.pazarama.moviepicker.data.dto.search.SearchResponse
 import com.pazarama.moviepicker.data.source.MovieRemoteDataSource
 import kotlinx.coroutines.flow.Flow
 import javax.inject.Inject
@@ -12,6 +13,10 @@ class MovieRepositoryImpl @Inject constructor(
 
     override suspend fun getMovieData(): Flow<NetworkResponse<Movies>> {
         return movieRemoteDataSource.getMovieData()
+    }
+
+    override suspend fun getMovieById(id: String): Flow<NetworkResponse<SearchResponse>> {
+        return movieRemoteDataSource.getMovieById(id)
     }
 
 

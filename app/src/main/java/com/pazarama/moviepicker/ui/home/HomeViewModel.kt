@@ -5,7 +5,7 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.pazarama.moviepicker.common.NetworkResponse
-import com.pazarama.moviepicker.data.dto.Movies
+import com.pazarama.moviepicker.data.dto.moviedata.Movies
 import com.pazarama.moviepicker.domain.GetMovieDataUseCase
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.Dispatchers
