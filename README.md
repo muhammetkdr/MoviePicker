@@ -17,7 +17,6 @@ This application is the final project of the Pazarama Android Bootcamp, develope
 
 ## Screenshots
 
-![fragmet_detail.xml](https://prnt.sc/uUF4DLVz_UCl)
 
 
 ## Getting Started
