@@ -2,7 +2,7 @@ package com.pazarama.moviepicker.data.source
 
 import com.pazarama.moviepicker.common.NetworkResponse
 import com.pazarama.moviepicker.data.api.MovieApiService
-import com.pazarama.moviepicker.data.dto.MovieResponse
+import com.pazarama.moviepicker.data.dto.Movies
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.catch
 import kotlinx.coroutines.flow.flow
@@ -10,7 +10,7 @@ import javax.inject.Inject
 
 class MovieRemoteDataSourceImpl @Inject constructor(private val apiService:MovieApiService): MovieRemoteDataSource {
 
-    override suspend fun getMovieData(): Flow<NetworkResponse<MovieResponse>> = flow {
+    override suspend fun getMovieData(): Flow<NetworkResponse<Movies>> = flow {
         emit(NetworkResponse.Loading)
         val response = apiService.getMovieList()
         if (response.isSuccessful){

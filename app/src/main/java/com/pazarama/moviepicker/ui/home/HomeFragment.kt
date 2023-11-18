@@ -42,7 +42,7 @@ class HomeFragment @Inject constructor() : Fragment() {
             when (response) {
 
                 is NetworkResponse.Success -> {
-                    binding.tvTitle.text = response.data.totalResults
+                    binding.tvTitle.text = response.data.search?.get(0)?.title
                 }
 
                 NetworkResponse.Loading -> {

@@ -1,17 +1,17 @@
 package com.pazarama.moviepicker.data.dto
 
 
-import com.squareup.moshi.Json
+import com.google.gson.annotations.SerializedName
 
 data class Search(
-    @Json(name = "imdbID")
+    @SerializedName("imdbID")
     val imdbID: String?,
-    @Json(name = "Poster")
+    @SerializedName("Poster")
     val poster: String?,
-    @Json(name = "Title")
+    @SerializedName("Title")
     val title: String?,
-    @Json(name = "Type")
+    @SerializedName("Type")
     val type: String?,
-    @Json(name = "Year")
+    @SerializedName("Year")
     val year: String?
 )
