@@ -3,16 +3,6 @@
 
 This repository is the project of the Pazarama Android Bootcamp, a collaborative effort by a team of dedicated developers.
 
-## Table of Contents
-
-- [Introduction](#introduction)
-- [Contributors](#contributors)
-- [Technologies and Libraries](#technologies-and-libraries)
-- [Screenshots](#screenshots)
-- [Getting Started](#getting-started)
-- [Contribution Guidelines](#contribution-guidelines)
-- [License](#license)
-
 
 
 ## Contributors
