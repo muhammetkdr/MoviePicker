@@ -69,12 +69,3 @@ Provide step-by-step instructions on how to set up the development environment a
 
 3. **Run the application on your emulator or physical device.**
 
-## Contribution Guidelines
-
-Explain how others can contribute to your project. Include information about how to report issues, suggest enhancements, and submit pull requests.
-
-## License
-
-Specify the license under which your project is distributed. For example:
-
-This project is licensed under the [MIT License](LICENSE).
